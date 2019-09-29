@@ -1,20 +1,25 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var BTNode = /** @class */ (function () {
-    function BTNode(key, value, left, right) {
+export class BTNode {
+
+    key: string; value?: string; left?: BTNode; right?: BTNode;
+
+    constructor(key: string, value?: string, left?: BTNode, right?: BTNode) {
         this.key = key;
         this.value = value;
         this.left = left;
         this.right = right;
     }
-    return BTNode;
-}());
-exports.BTNode = BTNode;
-var Tree = /** @class */ (function () {
-    function Tree(key, value, left, right) {
+}
+
+export class Tree {
+
+    root: BTNode;
+
+    constructor(key: string, value?: string, left?: BTNode, right?: BTNode) {
         this.root = new BTNode(key, value, left, right);
     }
-    Tree.prototype.printTree = function (tree) {
+
+    printTree(tree: BTNode) {
+
         // Printing tree in pre-order traversal / breath traversal
         if (tree == undefined)
             return;
@@ -27,8 +32,7 @@ var Tree = /** @class */ (function () {
                 this.printTree(tree.left);
             if (tree.right !== undefined)
                 this.printTree(tree.right);
+
         }
-    };
-    return Tree;
-}());
-exports.Tree = Tree;
+    }
+}
