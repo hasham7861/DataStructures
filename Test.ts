@@ -3,6 +3,9 @@
 // import BST from './BST';
 // import { BTNode } from './Tree';
 // import { Tree } from './Tree';
+import HashTable from './HashTable';
+
+console.log("\n-----Test Output-----");
 
 //---Stack
 // let s1: Stack = new Stack();
@@ -28,6 +31,17 @@
 
 // Balance the tBST tree
 // let isBalanced = tBST.balanceTree(tBST);
+
+
+
+// Hashtable
+let h1 = new HashTable();
+console.log(h1.isEmpty);
+h1.put("Hasham", "991498453");
+h1.put("hHasam", "99153");
+console.log(h1.isEmpty);
+console.log(h1.getValue("hHasam"));
+
 
 
 

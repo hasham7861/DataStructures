@@ -18,10 +18,25 @@ export default class BST {
             return new BST(key!, value);
         else if (tree._key < key!)
             tree._right = this.insertValue(tree._right, key, value);
-        else if (tree._key > key!)
+        else if (tree._key >= key!)
             tree._left = this.insertValue(tree._left, key, value);
 
         return tree;
+    }
+
+    findTree(key: string, tree?: BST): BST | undefined {
+        // if tree is empty, then return nothing
+        if (!tree)
+            return;
+        else if (tree.key == key) {
+            return tree;
+        }
+        else if (tree.key < key) {
+            return this.findTree(key, tree.right);
+        }
+        else if (tree.key > key) {
+            return this.findTree(key, tree.left);
+        }
     }
 
     printTree(tree: BST) {
@@ -49,6 +64,10 @@ export default class BST {
 
     public get key(): string {
         return this._key!
+    }
+
+    public get value(): string {
+        return this._value!
     }
 
 }

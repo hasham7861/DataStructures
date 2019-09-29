@@ -1,10 +1,10 @@
 import BST from './BST';
 
-class Hashtable {
-    list = [];
+export default class Hashtable {
+    private _list: BST[] = [];
     size = 100;
 
-    calculateHash(key: string) {
+    private calculateHash(key: string) {
         //calculates hash
 
         // if number convert it to string;
@@ -16,51 +16,49 @@ class Hashtable {
         return sumHash;
     }
 
-    calculateIndex(hash: number) {
+    private calculateIndex(hash: number) {
         return hash % this.size;
     }
 
-    put(key: string, value: string) {
-        let hash = this.calculateHash(key);
-        let index = this.calculateIndex(hash);
+    public put(key: string, value: string) {
+
+        const hash = this.calculateHash(key);
+        const index = this.calculateIndex(hash);
 
         // check if there are any entries at the index. i.e is there a BST
-        // if (typeof this.list[index] == "undefined")
-        //     this.list[index] = new BST([]);
-        // else {
-        //     this.list[index].insertValue(this.list[index], value);
-        // }
+        if (this._list[index] == undefined)
+            this._list[index] = new BST(key, value);
+        else {
+            this._list[index].insertValue(this._list[index], key, value);
+        }
 
     }
 
-    getValue(key: string) {
+    public getValue(key: string) {
+
+        if (this.isEmpty)
+            return;
+
         let hash = this.calculateHash(key);
         let index = this.calculateIndex(hash);
-        console.log(typeof this.list[index]);
 
-        //  if(typeof(this.list[index]) === "BST"){
-        //     this.list[index].printTree(this.list[index]);
+        if (index >= this._list.length || typeof this._list[index] == "undefined")
+            return "Can't find key:" + key;
 
-        //  }
-
-    }
-
-    containsKey(key: string) {
+        else { // If there is a BST there, then search for the key within the tree
+            return this._list[index].findTree(key, this._list[index]);
+        }
 
     }
 
-    isEmpty() {
-        this.list === [];
+    public containsKey(key: string) {
+
     }
 
+    public get isEmpty(): boolean {
+        return this._list.length == 0;
 
+    }
 
 }
-
-
-let h1 = new Hashtable();
-h1.put("apple", "69");
-h1.getValue("apple");
-
-
 
