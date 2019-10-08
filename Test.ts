@@ -1,9 +1,11 @@
+import { Node, LinkedList } from "./LinkedList";
 // import Stack from './Stack';
 // import { Tree, BTNode } from './Tree';
 // import BST from './BST';
 // import { BTNode } from './Tree';
 // import { Tree } from './Tree';
-import HashTable from './HashTable';
+// import HashTable from './HashTable';
+
 
 console.log("\n-----Test Output-----");
 
@@ -20,27 +22,31 @@ console.log("\n-----Test Output-----");
 // let T1 = new Tree("4", undefined, new BTNode("3"), new BTNode("5"));
 // T1.printTree(T1.root);
 
-// Tree is right skewed
+//--- Binary Search Tree - BST
 // let tBST = new BST('D');
-// tBST = tBST.insertValue(tBST, 'F')!;
-// tBST = tBST.insertValue(tBST, 'G')!;
-// tBST = tBST.insertValue(tBST, 'H')!;
-// tBST = tBST.insertValue(tBST, 'I')!;
-
+// tBST = tBST.insert(tBST, 'F')!;
+// tBST = tBST.insert(tBST, 'G')!;
+// tBST = tBST.insert(tBST, 'H')!;
+// tBST = tBST.insert(tBST, 'I')!;
 // tBST.printTree(tBST);
 
-// Balance the tBST tree
-// let isBalanced = tBST.balanceTree(tBST);
+
+//--- Hashtable
+// let h1 = new HashTable();
+// h1.put("Hasham", "991498453");
+// h1.put("hHasam", "99153");
+// console.log(h1.getValue("Hasham"));
 
 
+// -- LinkedList
+let ll = new LinkedList(new Node("Hasham"));
+ll.insert("potato");
+// console.log(ll.find("potato"));
+// ll.delete("Hasham")!;
+// console.log(ll.find("Hasham"));
+// console.log(ll.find("potato"));
 
-// Hashtable
-let h1 = new HashTable();
-console.log(h1.isEmpty);
-h1.put("Hasham", "991498453");
-h1.put("hHasam", "99153");
-console.log(h1.isEmpty);
-console.log(h1.getValue("hHasam"));
+ll.printAll();
 
 
 

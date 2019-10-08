@@ -29,7 +29,7 @@ export default class Hashtable {
         if (this._list[index] == undefined)
             this._list[index] = new BST(key, value);
         else {
-            this._list[index].insertValue(this._list[index], key, value);
+            this._list[index].insert(this._list[index], key, value);
         }
 
     }

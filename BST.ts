@@ -13,15 +13,19 @@ export default class BST {
 
     }
     // Self balance the tree somehow
-    insertValue(tree?: BST, key?: string, value?: string): BST | undefined {
+    insert(tree?: BST, key?: string, value?: string): BST | undefined {
         if (!tree)
             return new BST(key!, value);
         else if (tree._key < key!)
-            tree._right = this.insertValue(tree._right, key, value);
+            tree._right = this.insert(tree._right, key, value);
         else if (tree._key >= key!)
-            tree._left = this.insertValue(tree._left, key, value);
+            tree._left = this.insert(tree._left, key, value);
 
         return tree;
+    }
+
+    remove() {
+
     }
 
     findTree(key: string, tree?: BST): BST | undefined {
