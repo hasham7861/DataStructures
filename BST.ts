@@ -24,10 +24,6 @@ export default class BST {
         return tree;
     }
 
-    remove() {
-
-    }
-
     findTree(key: string, tree?: BST): BST | undefined {
         // if tree is empty, then return nothing
         if (!tree)

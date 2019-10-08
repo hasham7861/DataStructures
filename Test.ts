@@ -1,5 +1,6 @@
-import { Node, LinkedList } from "./LinkedList";
+// import { Node, LinkedList } from "./LinkedList";
 // import Stack from './Stack';
+// import Queue from './Queue';
 // import { Tree, BTNode } from './Tree';
 // import BST from './BST';
 // import { BTNode } from './Tree';
@@ -13,6 +14,15 @@ console.log("\n-----Test Output-----");
 // let s1: Stack = new Stack();
 // s1.push(2);
 // console.log(s1.pop());
+
+//--Queue
+// const queue = new Queue();
+// queue.enqueue("potato");
+// queue.enqueue("tomato");
+// console.log(queue.peek);
+// console.log(queue.dequeue("ko"));
+// console.log(queue.peek);
+
 
 //---Tree
 // var {Tree} = require('./Tree');
@@ -39,14 +49,13 @@ console.log("\n-----Test Output-----");
 
 
 // -- LinkedList
-let ll = new LinkedList(new Node("Hasham"));
-ll.insert("potato");
+// let ll = new LinkedList(new Node("Hasham"));
+// ll.insert("potato");
 // console.log(ll.find("potato"));
 // ll.delete("Hasham")!;
 // console.log(ll.find("Hasham"));
 // console.log(ll.find("potato"));
-
-ll.printAll();
+// ll.printAll();
 
 
 
