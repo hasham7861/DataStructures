@@ -15,12 +15,12 @@ console.log("\n-----Test Output-----");
 // s1.push(2);
 // console.log(s1.pop());
 
-//--Queue
+// --Queue
 // const queue = new Queue();
 // queue.enqueue("potato");
 // queue.enqueue("tomato");
 // console.log(queue.peek);
-// console.log(queue.dequeue("ko"));
+// console.log(queue.dequeue());
 // console.log(queue.peek);
 
 

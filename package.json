@@ -4,7 +4,8 @@
   "description": "All the data structures in es6",
   "scripts": {
     "build": "tsc",
-    "start": "npm run build && node Test"
+    "start": "npm run build && node Test",
+    "ls": "ls *.ts"
   },
   "author": "",
   "license": "ISC",

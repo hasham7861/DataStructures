@@ -7,15 +7,10 @@ export default class Queue {
         this.data!.push(item);
     }
 
-    dequeue(item: string): string {
+    dequeue(): string {
         if (this.isEmtpy)
             return "Queue is empty";
-
-        let indexOfItem = this.data!.indexOf(item);
-        if (indexOfItem != -1)
-            return this.data!.splice(indexOfItem, 1)[0];
-        else
-            return "item can't be found";
+        return this.data!.shift()!
     }
 
     get peek(): string {
